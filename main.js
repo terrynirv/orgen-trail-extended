@@ -54,3 +54,48 @@ class Wagon{
     
   }
   
+class Doctor extends Traveler {
+    constructor(name) {
+        super(name)
+    }
+    heal(traveler) {
+        if (traveler.ishealthy == false) {
+              traveler.ishealthy = true
+              
+          }
+      }
+}
+class Hunter extends Traveler {
+    constructor(name) {
+        super(name)
+        this.food = 2
+    }
+    hunt () {
+        this.food += 5
+        if (this.food > 0) {
+            this.ishealthy = true
+        }
+            
+}
+    eat () {
+
+
+        if (this.food <= 1) {
+            this.ishealthy = false
+            this.food = 0
+        } else {
+            this.food -= 2
+        }
+    }
+    giveFood(traveler, numOfFoodUnits) {
+        if (this.food < numOfFoodUnits) {
+            return this.food
+            
+        } else {
+            this.food -= numOfFoodUnits
+            traveler.food += numOfFoodUnits
+            
+        }
+
+    }
+  }

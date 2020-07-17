@@ -1,0 +1,11 @@
+body {
+    background-image: url(https://methodshop.com/wp-content/uploads/oregon-trail-bkgd.png);
+}
+
+p{
+    color: aliceblue;
+    font-weight: bolder;
+    position: relative;
+    top: 550px;
+    left: 500px;
+}
